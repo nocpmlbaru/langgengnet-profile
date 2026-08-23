@@ -4,6 +4,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Langgeng Net — Internet Cepat, Stabil, dan Dekat",
   description: "Langgeng Net menyediakan layanan internet untuk rumah dan bisnis.",
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 // Explicit mobile viewport: prevents phones from using a wide virtual layout
