@@ -1,38 +1,68 @@
 const services = [
-  ["01", "Internet Rumah", "Koneksi nyaman untuk streaming, belajar, bekerja, dan kebutuhan keluarga."],
-  ["02", "Internet Bisnis", "Koneksi yang mendukung operasional kantor dan usaha sehari-hari."],
-  ["03", "Dukungan Teknis", "Bantuan yang responsif untuk membantu menjaga koneksi tetap optimal."],
+  ["01", "Internet Rumah", "Koneksi untuk bekerja, belajar, streaming, dan kebutuhan keluarga sehari-hari."],
+  ["02", "Internet Bisnis", "Pilihan koneksi untuk membantu aktivitas kantor, usaha, dan operasional harian."],
+  ["03", "Dukungan Teknis", "Pendampingan saat membutuhkan bantuan pemasangan maupun penanganan gangguan."],
 ];
 
 const plans = [
-  ["10 Mbps", "Untuk kebutuhan ringan", "Cek harga"],
-  ["20 Mbps", "Nyaman untuk keluarga", "Paling populer"],
-  ["30 Mbps", "Untuk penggunaan lebih aktif", "Cek harga"],
+  ["10 Mbps", "Untuk kebutuhan ringan", "Cek ketersediaan"],
+  ["20 Mbps", "Nyaman untuk keluarga", "Cek ketersediaan"],
+  ["30 Mbps", "Untuk penggunaan lebih aktif", "Cek ketersediaan"],
+];
+
+const steps = [
+  ["01", "Cek area", "Hubungi Langgeng Net untuk mengecek ketersediaan layanan di lokasi Anda."],
+  ["02", "Pilih paket", "Tentukan paket sesuai kebutuhan setelah area dan kondisi teknis dikonfirmasi."],
+  ["03", "Pemasangan", "Tim menindaklanjuti proses pemasangan dan membantu memastikan layanan siap digunakan."],
+];
+
+const faqs = [
+  ["Apakah semua paket tersedia di setiap area?", "Ketersediaan mengikuti area layanan dan hasil pengecekan teknis. Hubungi kami untuk memastikan lokasi Anda."],
+  ["Bagaimana cara berlangganan?", "Mulai dengan menghubungi Langgeng Net dan kirim lokasi pemasangan. Kami akan membantu proses pengecekan dan pilihan paket."],
+  ["Apakah tersedia layanan untuk bisnis?", "Ya. Langgeng Net menyediakan pilihan layanan untuk kebutuhan rumah maupun bisnis. Detail layanan mengikuti kebutuhan dan kondisi lokasi."],
 ];
 
 export default function Home() {
   return <main>
-    <header className="site-header"><nav>
-      <a className="logo" href="#home"><span>L</span>Langgeng<span className="blue">Net</span></a>
-      <div className="nav-links"><a href="#layanan">Layanan</a><a href="#paket">Paket</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a></div>
-      <a className="nav-button" href="#kontak">Berlangganan <b>↗</b></a>
-    </nav></header>
+    <header className="site-header">
+      <nav aria-label="Navigasi utama">
+        <a className="logo" href="#home" aria-label="Langgeng Net beranda"><span>L</span>Langgeng<span className="blue">Net</span></a>
+        <div className="nav-links">
+          <a href="#layanan">Layanan</a><a href="#paket">Paket</a><a href="#tentang">Tentang</a><a href="#faq">FAQ</a>
+        </div>
+        <a className="nav-button" href="#kontak">Cek Coverage <b>↗</b></a>
+        <details className="mobile-menu">
+          <summary aria-label="Buka menu">Menu</summary>
+          <div className="mobile-menu-links"><a href="#layanan">Layanan</a><a href="#paket">Paket</a><a href="#tentang">Tentang</a><a href="#faq">FAQ</a><a href="#kontak">Cek Coverage</a></div>
+        </details>
+      </nav>
+    </header>
 
-    <section className="hero" id="home"><div className="hero-copy">
-      <div className="eyebrow"><i/> INTERNET UNTUK TETAP TERHUBUNG</div>
-      <h1>Koneksi yang bekerja <em>untuk Anda.</em></h1>
-      <p>Internet cepat dan stabil untuk rumah maupun bisnis, dengan pelayanan yang dekat dan mudah dihubungi.</p>
-      <div className="actions"><a className="primary" href="#paket">Lihat Paket <b>↓</b></a><a className="secondary" href="#tentang">Kenal Langgeng Net</a></div>
-      <div className="trust"><span><b>Stabil</b><small>untuk aktivitas harian</small></span><span><b>Responsif</b><small>dukungan teknis</small></span><span><b>Terjangkau</b><small>sesuai kebutuhan</small></span></div>
-    </div><div className="hero-visual"><div className="visual-glow"/><div className="signal-card"><div className="card-top"><span>LANGGENG NET</span><span className="online">● ONLINE</span></div><div className="card-title">Your connection<br/><strong>works for you.</strong></div><div className="bars"><i/><i/><i/><i/><i/></div><div className="card-bottom"><span><b>99.9%</b><small>uptime*</small></span><span><b>24/7</b><small>support</small></span></div></div></div></section>
+    <section className="hero" id="home">
+      <div className="hero-copy">
+        <div className="eyebrow"><i/> INTERNET UNTUK TETAP TERHUBUNG</div>
+        <h1>Koneksi yang bekerja <em>untuk Anda.</em></h1>
+        <p>Internet untuk rumah dan bisnis dengan pengalaman layanan yang sederhana, jelas, dan dekat dengan pelanggan.</p>
+        <div className="actions"><a className="primary" href="#paket">Lihat Paket <b>↓</b></a><a className="secondary" href="#tentang">Kenal Langgeng Net</a></div>
+        <div className="trust"><span><b>Untuk Rumah</b><small>kebutuhan harian</small></span><span><b>Untuk Bisnis</b><small>aktivitas operasional</small></span><span><b>Dukungan</b><small>saat Anda membutuhkan</small></span></div>
+      </div>
+      <div className="hero-visual" aria-hidden="true">
+        <div className="visual-glow"/>
+        <div className="signal-card"><div className="card-top"><span>LANGGENG NET</span><span className="online">● CONNECTED</span></div><div className="card-title">Your connection<br/><strong>works for you.</strong></div><div className="bars"><i/><i/><i/><i/><i/></div><div className="card-bottom"><span><b>FTTH</b><small>access</small></span><span><b>24/7</b><small>support*</small></span></div></div>
+      </div>
+    </section>
 
     <section className="section" id="layanan"><div className="section-head"><div><label>LAYANAN</label><h2>Sederhana untuk dipakai.<br/>Serius untuk diandalkan.</h2></div><p>Kami membangun layanan internet dengan satu tujuan: membuat koneksi menjadi bagian yang membantu, bukan menghambat.</p></div><div className="service-grid">{services.map(([n,t,d])=><article className="service" key={n}><span className="number">{n}</span><h3>{t}</h3><p>{d}</p><a href="#kontak">Pelajari lebih lanjut <b>→</b></a></article>)}</div></section>
 
-    <section className="plans" id="paket"><div className="section plan-inner"><div className="section-head"><div><label>PAKET INTERNET</label><h2>Pilih koneksi yang<br/>pas untuk Anda.</h2></div><p>Contoh paket. Harga dan ketersediaan mengikuti area layanan serta hasil pengecekan teknis.</p></div><div className="plan-grid">{plans.map(([speed,note,badge],i)=><article className={i===1?"plan featured":"plan"} key={speed}>{i===1&&<span className="popular">PALING POPULER</span>}<small>{speed}</small><h3>{note}</h3><p>Paket internet sesuai kebutuhan penggunaan.</p><a href="#kontak">{badge} <b>→</b></a></article>)}</div></div></section>
+    <section className="plans" id="paket"><div className="section plan-inner"><div className="section-head"><div><label>PAKET INTERNET</label><h2>Pilih koneksi yang<br/>pas untuk Anda.</h2></div><p>Contoh pilihan kecepatan. Harga dan ketersediaan mengikuti area layanan serta hasil pengecekan teknis.</p></div><div className="plan-grid">{plans.map(([speed,note,cta],i)=><article className={i===1?"plan featured":"plan"} key={speed}>{i===1&&<span className="popular">PILIHAN POPULER</span>}<small>{speed}</small><h3>{note}</h3><p>Detail paket dan harga dikonfirmasi sesuai area layanan.</p><a href="#kontak">{cta} <b>→</b></a></article>)}</div></div></section>
 
-    <section className="section" id="tentang"><div className="about"><div><label>TENTANG LANGGENG NET</label><h2>Dibangun dekat dengan pelanggan.</h2></div><div><p>Langgeng Net hadir untuk menyediakan koneksi internet yang dapat diandalkan bagi rumah dan bisnis.</p><p>Bagi kami, layanan internet bukan hanya soal kecepatan. Kestabilan, komunikasi, dan kehadiran saat pelanggan membutuhkan bantuan juga sama pentingnya.</p><a className="link" href="#kontak">Hubungi kami <b>↗</b></a></div></div></section>
+    <section className="section" id="tentang"><div className="about"><div><label>TENTANG LANGGENG NET</label><h2>Dibangun dekat dengan pelanggan.</h2></div><div><p>Langgeng Net hadir untuk menyediakan koneksi internet bagi rumah dan bisnis.</p><p>Bagi kami, layanan internet bukan hanya soal kecepatan. Kejelasan informasi, komunikasi, dan dukungan ketika pelanggan membutuhkan bantuan juga merupakan bagian dari pengalaman layanan.</p><a className="link" href="#kontak">Hubungi kami <b>↗</b></a></div></div></section>
 
-    <section className="section contact-section" id="kontak"><div className="contact"><div><label>SIAP TERHUBUNG?</label><h2>Yuk, cek apakah <em>Langgeng Net</em> tersedia di area Anda.</h2></div><div><p>Hubungi kami untuk pengecekan coverage, pilihan paket, dan proses pemasangan.</p><a className="light" href="#">Hubungi Langgeng Net <b>↗</b></a></div></div></section>
+    <section className="section process-section"><div className="section-head"><div><label>PROSES BERLANGGANAN</label><h2>Mulai dengan langkah yang sederhana.</h2></div><p>Tidak perlu menebak-nebak. Kami mulai dari pengecekan area dan kebutuhan, lalu melanjutkan proses sesuai kondisi lokasi.</p></div><div className="process-grid">{steps.map(([n,t,d])=><article className="process" key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></article>)}</div></section>
+
+    <section className="section faq-section" id="faq"><div className="faq-layout"><div><label>FAQ</label><h2>Pertanyaan yang sering ditanyakan.</h2><p>Belum menemukan jawaban yang Anda cari? Hubungi kami untuk mendapatkan informasi sesuai lokasi dan kebutuhan Anda.</p></div><div className="faq-list">{faqs.map(([q,a])=><details key={q}><summary>{q}<b>+</b></summary><p>{a}</p></details>)}</div></div></section>
+
+    <section className="section contact-section" id="kontak"><div className="contact"><div><label>SIAP TERHUBUNG?</label><h2>Yuk, cek apakah <em>Langgeng Net</em> tersedia di area Anda.</h2></div><div><p>Kirim lokasi pemasangan dan kebutuhan Anda. Kami akan membantu proses pengecekan coverage dan pilihan layanan.</p><a className="light" href="#home">Hubungi Langgeng Net <b>↗</b></a></div></div></section>
 
     <footer><div className="footer-top"><a className="logo light-logo" href="#home"><span>L</span>Langgeng<span className="blue">Net</span></a><p>Internet yang membantu Anda tetap terhubung.</p></div><div className="footer-bottom"><span>© 2026 Langgeng Net. All rights reserved.</span><span>Company Profile</span></div></footer>
   </main>;
