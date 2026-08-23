@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import PublicAiCs from "./components/public-ai-cs";
 
 export const metadata: Metadata = {
   title: "Langgeng Net — Internet Cepat, Stabil, dan Dekat",
@@ -10,8 +11,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Explicit mobile viewport: prevents phones from using a wide virtual layout
-// viewport and scaling the entire site down to a fraction of the screen.
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -19,5 +18,5 @@ export const viewport: Viewport = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="id"><body>{children}</body></html>;
+  return <html lang="id"><body>{children}<PublicAiCs /></body></html>;
 }
