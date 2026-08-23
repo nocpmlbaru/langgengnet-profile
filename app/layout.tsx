@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import "./components/public-ai-cs.css";
 import PublicAiCs from "./components/public-ai-cs";
 
 export const metadata: Metadata = {
