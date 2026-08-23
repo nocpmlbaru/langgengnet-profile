@@ -1,7 +1,6 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import "./public-ai-cs.css";
 
 const whatsappHref = "https://wa.me/6285329930709?text=Halo%20Langgeng%20Net%2C%20saya%20ingin%20mengecek%20ketersediaan%20layanan%20internet.";
 
